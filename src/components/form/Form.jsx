@@ -2,23 +2,27 @@ import React, { useState } from "react";
 
 function Form() {
   const [user, setUser] = useState("");
+  const [password, setPassword] = useState("");
 
   const userChange = (e) => {
     console.log("changed");
     setUser(e.target.value);
+  };
 
-};
+  const passChange = (e) => {
+    console.log("Password");
+    setPassword(e.target.value);
+  };
 
-const handelSubmit = (e) => {
+  const handelSubmit = (e) => {
     e.preventDefault();
-    
+
     console.log("submited");
     console.log(user);
-    
-    
-    
-    
-    setUser('')
+    console.log(password);
+
+    setUser("");
+    setPassword("");
   };
 
   return (
@@ -42,6 +46,23 @@ const handelSubmit = (e) => {
           />
         </div>
         {/*   */}
+        <div className="mb-5">
+          <label
+            htmlFor="Password"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Your Password
+          </label>
+          <input
+            value={password}
+            onChange={passChange}
+            type="Password"
+            id="Password"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="*********"
+            required
+          />
+        </div>
 
         <button
           type="submit"
