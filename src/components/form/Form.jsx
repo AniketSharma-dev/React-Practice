@@ -4,13 +4,26 @@ function Form() {
   const [user, setUser] = useState("");
 
   const userChange = (e) => {
-    console.log("Submited");
+    console.log("changed");
     setUser(e.target.value);
+
+};
+
+const handelSubmit = (e) => {
+    e.preventDefault();
+    
+    console.log("submited");
+    console.log(user);
+    
+    
+    
+    
+    setUser('')
   };
 
   return (
     <>
-      <form className="w-[350px] ">
+      <form className="w-[350px]" onSubmit={handelSubmit}>
         <div className="mb-5">
           <label
             htmlFor="Username"
