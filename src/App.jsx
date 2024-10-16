@@ -5,8 +5,14 @@ import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
+import { useContext } from "react";
+import { DataContext } from "./context/UserContext";
 
 const App = () => {
+
+ 
+  
+  
   return (
     <>
       <Navbar />
