@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Card from "./components/Card/Card";
 import "./App.css";
+import Data from "./components/Data/Data";
 
 function App() {
   const users = [
@@ -54,6 +55,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Data/>
 
       <section className="w-full grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))]  gap-7 px-4 md:px-7 xl:px-20  py-10">
         {users.map(function (e, ind) {
@@ -69,7 +71,7 @@ function App() {
           );
         })}
       </section>
-      <Form />
+      {/* <Form /> */}
       <Footer />
     </>
   );
