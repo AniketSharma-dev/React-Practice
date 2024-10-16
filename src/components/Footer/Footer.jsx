@@ -1,4 +1,5 @@
 import React from "react";
+import icon from "./../../assets/Fav.png"
 
 function Footer() {
   return (
@@ -10,12 +11,12 @@ function Footer() {
               <div className="mb-6 md:mb-0">
                 <a href="https://flowbite.com/" className="flex items-center">
                   <img
-                    src="https://flowbite.com/docs/images/logo.svg"
+                    src={icon}
                     className="h-8 me-3"
                     alt="FlowBite Logo"
                   />
-                  <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                    Flowbite
+                  <span className=" ml-[-10px] self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                    niket Sharma
                   </span>
                 </a>
               </div>
@@ -127,9 +128,9 @@ function Footer() {
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-2" />
           <div className="sm:flex sm:items-center sm:justify-between my-8 p-4">
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-              © 2023{" "}
+              © 2024{" "}
               <a href="https://flowbite.com/" className="hover:underline">
-                Flowbite™
+                Aniket Sharma™
               </a>
               . All Rights Reserved.
             </span>
