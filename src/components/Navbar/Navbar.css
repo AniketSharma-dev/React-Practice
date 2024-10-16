@@ -1,0 +1,25 @@
+
+
+.navlink{
+    overflow: hidden;
+}
+
+.navlink::after{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+        width: 100%;
+        height: 100%;
+    border-radius: 50%;
+    background-color: rgb(182, 19, 51);
+    transition: all ease 0.5s;
+    mix-blend-mode: color;
+    color: white;
+}
+
+.navlink:hover::after{
+    color: black;
+    border-radius: 0%;
+    top: 0;
+}
