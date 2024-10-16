@@ -55,7 +55,7 @@ function App() {
     <>
       <Navbar />
 
-      <section className="w-full grid grid-cols-4 gap-7 px-20 py-10">
+      <section className="w-full grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))]  gap-7 px-4 md:px-7 xl:px-20  py-10">
         {users.map(function (e, ind) {
           return (
             <Card

@@ -15,17 +15,12 @@ function Card(props) {
           <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
             {props.userName}
           </h5>
-          <div className="flex gap-x-5">
-            <span className="text-sm text-gray-500 dark:text-gray-400">
-              {props.profession},
+            <span className="text-base font-bold text-purple-500 dark:text-purple-400">
+              {props.profession}
             </span>
             <span className="text-sm text-gray-500 dark:text-gray-400">
-              {props.city},
+              {props.city},  {props.age}
             </span>
-            <span className="text-sm text-gray-500 dark:text-gray-400">
-              {props.age},
-            </span>
-          </div>
           <div className="flex mt-4 md:mt-6">
             <a
               href="#"

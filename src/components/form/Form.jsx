@@ -27,7 +27,8 @@ function Form() {
 
   return (
     <>
-      <section className="flex justify-center items-center w-full h-[100vh]">
+      <section className="flex justify-center flex-col items-center w-full h-[100vh]">
+        <h4 className="text-2xl mb-14">Login Form </h4>
         <form className="w-[350px]" onSubmit={handelSubmit}>
           <div className="mb-5">
             <label
