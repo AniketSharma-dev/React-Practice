@@ -71,7 +71,7 @@ function App() {
           );
         })}
       </section>
-      {/* <Form /> */}
+      <Form />
       <Footer />
     </>
   );
