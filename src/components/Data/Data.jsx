@@ -10,10 +10,10 @@ function Data() {
     console.log(response.data);
     setData(response.data);
   };
-// fetching data on load
+  // fetching data on load
   useEffect(() => {
     getData();
-  });
+  }, []);
 
   return (
     <>
