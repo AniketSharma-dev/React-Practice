@@ -21,8 +21,3 @@
     border-radius: 0%;
     top: 0;
 }
-
-.navlink a {
-    position: relative;
-    z-index: 9;
-}

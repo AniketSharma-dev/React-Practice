@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card(props) {
+const Card = (props) => {
   // console.log(props);
 
   return (
@@ -15,12 +15,12 @@ function Card(props) {
           <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
             {props.userName}
           </h5>
-            <span className="text-base font-bold text-purple-500 dark:text-purple-400">
-              {props.profession}
-            </span>
-            <span className="text-sm text-gray-500 dark:text-gray-400">
-              {props.city},  {props.age}
-            </span>
+          <span className="text-base font-bold text-purple-500 dark:text-purple-400">
+            {props.profession}
+          </span>
+          <span className="text-sm text-gray-500 dark:text-gray-400">
+            {props.city}, {props.age}
+          </span>
           <div className="flex mt-4 md:mt-6">
             <a
               href="#"
@@ -39,6 +39,6 @@ function Card(props) {
       </div>
     </>
   );
-}
+};
 
 export default Card;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Form() {
+const Form = () => {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
 
@@ -76,6 +76,6 @@ function Form() {
       </section>
     </>
   );
-}
+};
 
 export default Form;

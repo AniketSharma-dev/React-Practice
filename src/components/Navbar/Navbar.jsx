@@ -1,7 +1,8 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
-function Navbar() {
+const Navbar = () => {
   return (
     <>
       <header className="py-5 px-4 md:px-10 lg:px-14 bg-[#111827]">
@@ -12,25 +13,37 @@ function Navbar() {
           <ul className="hidden md:flex">
             <li className="navlink relative mx-2 text-xl px-5 py-3 inline-block ">
               {" "}
-              <a href="/"> Home </a>
+              <Link className="relative z-10" to="/">
+                {" "}
+                Home{" "}
+              </Link>
             </li>
             <li className="navlink relative mx-2 text-xl px-5 py-3 inline-block ">
               {" "}
-              <a href="/about"> About </a>
+              <Link className="relative z-10" to="/about">
+                {" "}
+                About{" "}
+              </Link>
             </li>
             <li className="navlink relative mx-2 text-xl px-5 py-3 inline-block ">
               {" "}
-              <a href="/contact"> Contact </a>
+              <Link className="relative z-10" to="/contact">
+                {" "}
+                Contact{" "}
+              </Link>
             </li>
             <li className="navlink relative mx-2 text-xl px-5 py-3 inline-block ">
               {" "}
-              <a href="/product"> Product </a>
+              <Link className="relative z-10" to="/product">
+                {" "}
+                Product{" "}
+              </Link>
             </li>
           </ul>
         </nav>
       </header>
     </>
   );
-}
+};
 
 export default Navbar;

@@ -1,11 +1,10 @@
 import React from "react";
-import Navbar from "../components/Navbar/Navbar";
 import Data from "../components/Data/Data";
 import Card from "../components/Card/Card";
 import Form from "../components/Form/Form";
 import Footer from "../components/Footer/Footer";
 
-function Home() {
+const Home = () => {
   const users = [
     {
       name: "Arina Doe",
@@ -53,7 +52,6 @@ function Home() {
   // console.log(users[0].name);
   return (
     <>
-      <Navbar />
       <Data />
       <section className="w-full grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))]  gap-7 px-4 md:px-7 xl:px-20  py-10">
         {users.map(function (e, ind) {
@@ -73,6 +71,6 @@ function Home() {
       <Footer />
     </>
   );
-}
+};
 
 export default Home;

@@ -1,7 +1,7 @@
 import React from "react";
-import icon from "./../../assets/Fav.png"
+import icon from "./../../assets/Fav.png";
 
-function Footer() {
+const Footer = () => {
   return (
     <>
       <footer className="bg-white dark:bg-gray-900">
@@ -10,11 +10,7 @@ function Footer() {
             <div className="md:flex md:justify-between">
               <div className="mb-6 md:mb-0">
                 <a href="https://flowbite.com/" className="flex items-center">
-                  <img
-                    src={icon}
-                    className="h-8 me-3"
-                    alt="FlowBite Logo"
-                  />
+                  <img src={icon} className="h-8 me-3" alt="FlowBite Logo" />
                   <span className=" ml-[-10px] self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                     niket Sharma
                   </span>
@@ -232,6 +228,6 @@ function Footer() {
       </footer>
     </>
   );
-}
+};
 
 export default Footer;

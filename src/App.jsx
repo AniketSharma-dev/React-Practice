@@ -3,11 +3,13 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
+import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -16,6 +18,6 @@ function App() {
       </Routes>
     </>
   );
-}
+};
 
 export default App;
