@@ -7,12 +7,11 @@ import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import { useContext } from "react";
 import { DataContext } from "./context/UserContext";
+import Form from "./components/Form/Form";
+import Footer from "./components/Footer/Footer";
+
 
 const App = () => {
-
- 
-  
-  
   return (
     <>
       <Navbar />
@@ -21,7 +20,9 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/login" element={<Form />} />
       </Routes>
+      <Footer />
     </>
   );
 };

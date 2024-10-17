@@ -3,15 +3,31 @@ import React, { useState } from "react";
 const Form = () => {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
+  const [type, setType] = useState(false);
 
-  const userChange = (e) => {
+  // States to track the validity of the password
+  const [uppercase, setUpperCase] = useState(false);
+  const [lowercase, setLowerCase] = useState(false);
+  const [number, setNumber] = useState(false);
+  const [specialchar, setSpecialchar] = useState(false);
+  const [minlength, setMinLength] = useState(false);
+
+  const userUpdate = (e) => {
     console.log("changed");
     setUser(e.target.value);
   };
 
-  const passChange = (e) => {
+  const passUpdate = (e) => {
+    const value = e.target.value;
+    setPassword(value);
     console.log("Password");
-    setPassword(e.target.value);
+    console.log(value);
+
+    setUpperCase(/[A-Z]/.test(value));
+    setLowerCase(/[a-z]/.test(value));
+    setNumber(/[0-9]/.test(value));
+    setSpecialchar(/[\W_]/.test(value));
+    setMinLength(value.length >= 8);
   };
 
   const handelSubmit = (e) => {
@@ -23,6 +39,14 @@ const Form = () => {
 
     setUser("");
     setPassword("");
+  };
+
+  console.log();
+
+  const togglePassword = () => {
+    setType(!type);
+
+    // setUppercase()
   };
 
   return (
@@ -39,11 +63,11 @@ const Form = () => {
             </label>
             <input
               value={user}
-              onChange={userChange}
+              onChange={userUpdate}
               type="text"
               id="Username"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="name"
+              placeholder="Username"
               required
             />
           </div>
@@ -55,15 +79,80 @@ const Form = () => {
             >
               Your Password
             </label>
-            <input
-              value={password}
-              onChange={passChange}
-              type="Password"
-              id="Password"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="*********"
-              required
-            />
+            <div className="relative">
+              <input
+                value={password}
+                onChange={passUpdate}
+                type={type ? "text" : "password"}
+                id="Password"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Password"
+                required
+              />
+              <span
+                onClick={togglePassword}
+                className="absolute right-2 top-1 text-2xl cursor-pointer text-gray-300"
+              >
+                <i className={type ? "ri-eye-line" : "ri-eye-off-line"}></i>
+              </span>
+            </div>
+          </div>
+          <div className="w-full mb-5">
+            <ul>
+              <li id="upper" className={`text-lg ${uppercase ? "text-green-500" : "text-red-500"}`}>
+                {" "}
+                <i
+                  className={
+                    uppercase
+                      ? "ri-checkbox-circle-line"
+                      : "ri-close-circle-line"
+                  }
+                ></i>{" "}
+                At least one uppercase character
+              </li>
+              <li id="lower" className={`text-lg ${lowercase ? "text-green-500" : "text-red-500"}`}>
+                {" "}
+                <i
+                  className={
+                    lowercase
+                      ? "ri-checkbox-circle-line"
+                      : "ri-close-circle-line"
+                  }
+                ></i>{" "}
+                At least one lowercase character
+              </li>
+              <li id="number" className={`text-lg ${number ? "text-green-500" : "text-red-500"}`}>
+                {" "}
+                <i
+                  className={
+                    number ? "ri-checkbox-circle-line" : "ri-close-circle-line"
+                  }
+                ></i>{" "}
+                At least one number character
+              </li>
+              <li id="special" className={`text-lg ${specialchar ? "text-green-500" : "text-red-500"}`}>
+                {" "}
+                <i
+                  className={
+                    specialchar
+                      ? "ri-checkbox-circle-line"
+                      : "ri-close-circle-line"
+                  }
+                ></i>{" "}
+                At least one special character
+              </li>
+              <li id="length" className={`text-lg ${minlength ? "text-green-500" : "text-red-500"}`}>
+                {" "}
+                <i
+                  className={
+                    minlength
+                      ? "ri-checkbox-circle-line"
+                      : "ri-close-circle-line"
+                  }
+                ></i>{" "}
+                At least one 8 character
+              </li>
+            </ul>
           </div>
 
           <button

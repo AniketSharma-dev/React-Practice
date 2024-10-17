@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import Data from "../components/Data/Data";
 import Card from "../components/Card/Card";
-import Form from "../components/Form/Form";
-import Footer from "../components/Footer/Footer";
 import { DataContext } from "../context/UserContext";
 
 const Home = () => {
@@ -28,8 +26,6 @@ const Home = () => {
           );
         })}
       </section>
-      <Form />
-      <Footer />
     </>
   );
 };

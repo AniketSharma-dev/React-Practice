@@ -11,33 +11,38 @@ const Navbar = () => {
             Aniket Sharma
           </h2>
           <ul className="hidden md:flex">
-            <li className="navlink relative mx-2 text-xl px-5 py-3 inline-block ">
+            <li className="navlink relative mx-2 text-xl px-5 py-2 inline-block ">
               {" "}
               <Link className="relative z-10" to="/">
                 {" "}
                 Home{" "}
               </Link>
             </li>
-            <li className="navlink relative mx-2 text-xl px-5 py-3 inline-block ">
+            <li className="navlink relative mx-2 text-xl px-5 py-2 inline-block ">
               {" "}
               <Link className="relative z-10" to="/about">
                 {" "}
                 About{" "}
               </Link>
             </li>
-            <li className="navlink relative mx-2 text-xl px-5 py-3 inline-block ">
+            <li className="navlink relative mx-2 text-xl px-5 py-2 inline-block ">
               {" "}
               <Link className="relative z-10" to="/contact">
                 {" "}
                 Contact{" "}
               </Link>
             </li>
-            <li className="navlink relative mx-2 text-xl px-5 py-3 inline-block ">
+            <li className="navlink relative mx-2 text-xl px-5 py-2 inline-block ">
               {" "}
-              <Link className="relative z-10" to="/product">
+              <Link className="relative z-10" to={"/product"}>
                 {" "}
                 Product{" "}
               </Link>
+            </li>
+            <li className="login   px-5 py-2 inline-block">
+            
+
+              <Link className="text-xl" to={"/login"}>Login</Link>
             </li>
           </ul>
         </nav>
