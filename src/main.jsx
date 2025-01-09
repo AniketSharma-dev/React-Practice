@@ -7,12 +7,11 @@ import UserContext from "./context/UserContext.jsx";
 import 'remixicon/fonts/remixicon.css'
 
 createRoot(document.getElementById("root")).render(
-  // <StrictMode>
-  <BrowserRouter>
-    <UserContext>
-      <App />
-    </UserContext>
-  </BrowserRouter>
-
-  // </StrictMode>,
+  <StrictMode>
+    <BrowserRouter>
+      <UserContext>
+        <App />
+      </UserContext>
+    </BrowserRouter>
+  </StrictMode>
 );

@@ -5,9 +5,9 @@ const Data = () => {
   const [data, setData] = useState([]);
 
   const getData = async () => {
-    console.log("get Data");
+    // console.log("get Data");
     const response = await axios.get("https://picsum.photos/v2/list");
-    console.log(response.data);
+    // console.log(response.data);
     setData(response.data);
   };
   // fetching data on load

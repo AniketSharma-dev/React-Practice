@@ -8,7 +8,7 @@ const Home = () => {
 
 
   const users = useContext(DataContext)
-  console.log(users);
+  // console.log(users);
   return (
     <>
       <Data />
