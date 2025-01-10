@@ -6,7 +6,8 @@ This project is built with **React** and **Vite** to practice essential React co
 
 ### Live Demo
 
-Check out the live version of the project here: [GitHub Pages](https://aniketsharma-dev.github.io/React-Practice/)
+<!-- Check out the live version of the project here: [GitHub Pages](https://aniketsharma-dev.github.io/React-Practice/) -->
+Check out the live version of the project here: [GitHub Pages](https://5l5gv5-5173.csb.app/)
 
 ## Features
 
